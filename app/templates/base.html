@@ -1,0 +1,14 @@
+<html>
+    <head>
+        {% if title %}
+        <title>Upward & Onward Finance -- {{ title }}</title>
+        {% else %}
+        <title>Welcome to Upward & Onward Finance</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>Upward & Onward Finance: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
