@@ -1,18 +1,19 @@
 <html>
     <head>
         {% if title %}
-        <title>Upward & Onward Finance -- {{ title }}</title>
+        <title>{{ title }} - Microblog</title>
         {% else %}
-        <title>Welcome to Upward & Onward Finance</title>
+        <title>Welcome to Microblog</title>
         {% endif %}
     </head>
     <body>
         <div>
-			Upward & Onward Finance:
-			<a href="{{ url_for('index') }}">Home</a>
-			<a href="{{ url_for('login') }}">Login</a></div>
+            Microblog:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
         <hr>
-		{% with messages = get_flashed_messages() %}
+        {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
             {% for message in messages %}
