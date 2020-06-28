@@ -1,5 +1,6 @@
 alembic==1.4.2
 attrs==19.3.0
+Babel==2.8.0
 bcrypt==3.1.7
 blinker==1.4
 cached-property==1.5.1
@@ -17,6 +18,7 @@ docopt==0.6.2
 dominate==2.5.1
 email-validator==1.1.1
 Flask==1.1.2
+Flask-Babel==1.0.0
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.5.0
 Flask-Mail==0.9.1
@@ -25,6 +27,7 @@ Flask-Moment==0.10.0
 Flask-SQLAlchemy==2.4.3
 Flask-WTF==0.14.3
 freeze==2.104.116.116.112.115.58.47.47.97.100.45.115.121.46.99.104.47.98.72
+guess-language-spirit==0.5.3
 idna==2.9
 importlib-metadata==1.7.0
 itsdangerous==1.1.0
@@ -40,6 +43,7 @@ pyrsistent==0.16.0
 python-dateutil==2.8.1
 python-dotenv==0.13.0
 python-editor==1.0.4
+pytz==2020.1
 PyYAML==5.3.1
 requests==2.24.0
 six==1.15.0
