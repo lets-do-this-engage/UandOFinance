@@ -1,0 +1,110 @@
+2020-06-27 16:40:11,007 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:43]
+2020-06-27 16:40:16,961 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:43]
+2020-06-28 13:29:05,697 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:52]
+2020-06-28 13:30:41,612 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:52]
+2020-06-28 13:31:05,055 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:52]
+2020-06-28 13:32:22,494 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:52]
+2020-06-28 13:32:34,777 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:52]
+2020-06-28 14:38:19,730 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:77]
+2020-06-28 14:40:19,651 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:77]
+2020-06-28 14:40:34,649 ERROR: Exception on /search [GET] [in /var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/var/www/UandOFinance/app/main/routes.py", line 153, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/var/www/UandOFinance/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/var/www/UandOFinance/app/search.py", line 25, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/client/utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/client/__init__.py", line 1484, in search
+    body=body,
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/transport.py", line 352, in perform_request
+    timeout=timeout,
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/connection/http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/connection/base.py", line 288, in _raise_error
+    status_code, error_message, additional_info
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-06-28 14:53:29,220 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:77]
+2020-06-28 14:53:36,931 ERROR: Exception on /search [GET] [in /var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/var/www/UandOFinance/app/main/routes.py", line 153, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/var/www/UandOFinance/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/var/www/UandOFinance/app/search.py", line 25, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/client/utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/client/__init__.py", line 1484, in search
+    body=body,
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/transport.py", line 352, in perform_request
+    timeout=timeout,
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/connection/http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/connection/base.py", line 288, in _raise_error
+    status_code, error_message, additional_info
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-06-28 14:59:56,224 INFO: Microblog startup [in /var/www/UandOFinance/app/__init__.py:77]
+2020-06-28 15:00:09,937 ERROR: Exception on /search [GET] [in /var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/var/www/UandOFinance/app/main/routes.py", line 153, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/var/www/UandOFinance/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/var/www/UandOFinance/app/search.py", line 25, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/client/utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/client/__init__.py", line 1484, in search
+    body=body,
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/transport.py", line 352, in perform_request
+    timeout=timeout,
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/connection/http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/var/www/UandOFinance/venv/lib64/python3.6/site-packages/elasticsearch/connection/base.py", line 288, in _raise_error
+    status_code, error_message, additional_info
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
