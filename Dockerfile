@@ -3,7 +3,8 @@ FROM python:3.6-alpine
 RUN adduser -D UandOFinance
 
 WORKDIR /home/UandOFinance
-RUN apk add build-base libffi-dev openssl-dev bash
+RUN apk update
+RUN apk add build-base libffi-dev openssl-dev bash busybox-extras
 COPY requirements.txt requirements.txt
 RUN python -m venv venv
 RUN venv/bin/pip install --upgrade pip
