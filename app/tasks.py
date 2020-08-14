@@ -10,6 +10,7 @@ from app.email import send_email
 app = create_app()
 app.app_context().push()
 
+
 def _set_task_progress(progress):
     job = get_current_job()
     if job:
@@ -37,7 +38,7 @@ def export_posts(user_id):
             i += 1
             _set_task_progress(100 * i // total_posts)
 
-        send_email('[Microblog] Your blog posts',
+        send_email('[Upward And Onward Finance] Your blog posts',
                 sender=app.config['ADMINS'][0], recipients=[user.email],
                 text_body=render_template('email/export_posts.txt', user=user),
                 html_body=render_template('email/export_posts.html',
