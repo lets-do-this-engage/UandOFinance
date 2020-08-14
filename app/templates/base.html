@@ -32,6 +32,9 @@
                     {% if current_user.is_anonymous %}
                     <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
                     {% else %}
+					<li>
+                        <a href="{{ url_for('main.watchlist') }}">Watchlist</a>
+                    </li>
                     <li>
                         <a href="{{ url_for('main.messages') }}">{{ _('Messages') }}
                             {% set new_messages = current_user.new_messages() %}
