@@ -3,6 +3,22 @@
 
 {% block app_content %}
     <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
+	{% if accounts %}
+		{% for account in accounts %}
+			<table class="table table-hover">
+				<tr>
+					<td>
+						Account Name
+					</td>
+					<td>
+						Balance
+					</td>
+				</tr>
+			</table>
+			{% include '_accountDashboardSummary.html' %}
+		{% endfor %}
+	{% endif %}
+	<br/>
     {% if form %}
     {{ wtf.quick_form(form) }}
     <br>
