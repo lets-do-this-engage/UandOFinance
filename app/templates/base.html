@@ -33,6 +33,9 @@
                     <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
                     {% else %}
 					<li>
+                        <a href="{{ url_for('main.accounts') }}">Accounts</a>
+                    </li>
+					<li>
                         <a href="{{ url_for('main.watchlist') }}">Watchlist</a>
                     </li>
                     <li>
