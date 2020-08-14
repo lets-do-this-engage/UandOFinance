@@ -291,3 +291,17 @@ class Task(db.Model):
     def get_progress(self):
         job = self.get_rq_job()
         return job.meta.get('progress', 0) if job is not None else 100
+        
+class AccountType(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128), index=True)
+    
+class Account(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128), index=True)
+    account_number = db.Column(db.String(64))
+    account_type = db.Column(db.String(128), db.ForeignKey(AccountType.name))
+    financial_institution = db.Column(db.String(128))
+    notes = db.Column(db.TEXT)
+    is_open = db.Column(db.Boolean)
+    opening_balance = db.Column(db.NUMERIC)
