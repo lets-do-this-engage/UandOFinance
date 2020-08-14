@@ -19,12 +19,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
-                    <li><a href="{{ url_for('main.explore') }}">{{ _('Explore') }}</a></li>
                 </ul>
                 {% if g.search_form %}
                 <form class="navbar-form navbar-left" method="get" action="{{ url_for('main.search') }}">
                     <div class="form-group">
-                        {{ g.search_form.q(size=20, class='form-control', placeholder=g.search_form.q.label.text) }}
+                        {{ g.search_form.q(size=15, class='form-control', placeholder=g.search_form.q.label.text) }}
                     </div>
                 </form>
                 {% endif %}
@@ -36,10 +35,13 @@
                         <a href="{{ url_for('main.accounts') }}">Accounts</a>
                     </li>
 					<li>
-                        <a href="{{ url_for('main.portfolio') }}">Portfolio</a>
+                        <a href="{{ url_for('main.bills') }}">Bills</a>
                     </li>
 					<li>
-                        <a href="{{ url_for('main.watchlist') }}">Watchlist</a>
+                        <a href="{{ url_for('main.reports') }}">Reports</a>
+                    </li>
+					<li>
+                        <a href="{{ url_for('main.portfolio') }}">Portfolio</a>
                     </li>
                     <li>
                         <a href="{{ url_for('main.messages') }}">{{ _('Messages') }}
